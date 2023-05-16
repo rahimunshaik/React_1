@@ -16,6 +16,7 @@ src >> index.js and App.js
 main root file--> index.js
 import ReactDOM from 'react-dom/client' --> DOM manipilation JS andar html pages ko render kartethey
 react fragmentation:- adding extra div in App.js 
+<></>
 create-react-app=======================================
 Installation:
 open terminal redirect to you directory:-
