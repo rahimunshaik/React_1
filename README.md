@@ -1,5 +1,21 @@
 # React
+Class_1========================================================
+-Frontend library--JS library--component based language[class component based,function component based]
+before react we used running node >> npm init >> 
+npm create-react-app name of you application --automatically node installed
+1GB=1024MB npm node package manager---npx-node package execution saves storage just execute the project
 
+npx create-react-app my-react-app
+nodemodules>>public >>src>> gitignore>>package.json>>readme file
+cd my-react-app
+npm start
+production mey run karnahay:-npm run build.
+
+public folder> only index.html removed evrything--<div id="root"> </div>
+src >> index.js and App.js 
+main root file--> index.js
+import ReactDOM from 'react-dom/client' --> DOM manipilation JS andar html pages ko render kartethey
+react fragmentation:- adding extra div in App.js 
 create-react-app=======================================
 Installation:
 open terminal redirect to you directory:-
