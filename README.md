@@ -17,6 +17,12 @@ main root file--> index.js
 import ReactDOM from 'react-dom/client' --> DOM manipilation JS andar html pages ko render kartethey
 react fragmentation:- adding extra div in App.js 
 <></>
+
+Class-2:-------------------------------------
+Class-3:-------------------------------------
+const[text,setText]=useState("this is correct setYext formmate");
+camel case in react:--to change a value we use-----onChange={} Handler
+
 create-react-app=======================================
 Installation:
 open terminal redirect to you directory:-
@@ -63,5 +69,80 @@ export default log;
 in 1.js export log in this js file
 import log from './2.js';
 log();
+Lecture:-1------------------Mini Project: Starting the Project------------------------
+Lecture:-2------------------Mini Project: Starting the Project------------------------
+Lecture:-3------------------Mini Project: Starting the Project------------------------
+Lecture:-4------------------Mini Project: Starting the Project------------------------
+1. How do you write an inline style specifying the font-size:10px and color:blue in JSX?
+ans: style={{fontSize:10, color:'blue'}};
 
+2. Which of the following is the correct syntax for adding a click event handler, foo, to a button in React Jsx ?
+ans: <button onClick={this.foo}>
 
+3. What is a state in React ?
+ans: A state in React is used to store the property values that belong to a component.   it enables a component to keep track of changes between renders
+
+4. Over the image
+Send Feedback
+You are given a code to display an image on the page, you have to print “I’m on the image” in the console as soon as you move over the image. So which of the following is a correct event for that?
+import React from "react"
+function App() {
+   return (
+       <div>
+           <img ------- src="ABC"/>
+        </div>
+   )
+}
+
+export default App
+ans: onMouseOver={()=>console.log("over the image")}
+  
+5.Find the error
+Find error/s in the given code:
+import React from "react"
+
+function App(){
+   constructor(){
+       this.state={
+           myName: “CN”
+       }
+   }
+   render(){
+       return (
+           <div>
+               <h1>{this.state.myName}</h1>
+           </div>
+       )
+   }
+}
+export default App
+Options
+This problem may have one or more correct answers[1,4]
+>It should be a class component instead of a functional component----
+Instead of {this.state.myName} in <h1> it should be {myName}
+render() statement should not be there.
+>super() is missing from the constructor-----
+
+6.As soon as the state of react component gets changed, the component will
+ans: be-rerendered.
+Solution Description
+As soon a state gets updated, the component re-renders itself
+
+7. Output of the code
+Send Feedback
+Find out what happens when the following render() method gets executed?
+ render(){
+   let code = ["Java","ES6","Ruby"]
+     return (
+        <div>
+           {code.map(item => <p>{item}</p>)}
+        </div>)
+   }
+ans: Displays the list of code in the array.
+Solution Description
+map will iterate over each element of the list to display
+
+8. Styling in React
+Send Feedback
+What is the correct method to write an inline style specifying the background color: yellow and color:green; in JSX.
+ans: style = {{backgroundColor: 'yellow', color:'green'}}
