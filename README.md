@@ -5,20 +5,27 @@ before react we used running node >> npm init >>
 npm create-react-app name of you application --automatically node installed
 1GB=1024MB npm node package manager---npx-node package execution saves storage just execute the project
 
-npx create-react-app my-react-app
+1.npx create-react-app my-react-app
 nodemodules>>public >>src>> gitignore>>package.json>>readme file
-cd my-react-app
-npm start
-production mey run karnahay:-npm run build.
+2.cd my-react-app
+3.npm start
+4.to check output of your project--production mey run karnahay:-npm run build.
 
 public folder> only index.html removed evrything--<div id="root"> </div>
 src >> index.js and App.js 
-main root file--> index.js
-import ReactDOM from 'react-dom/client' --> DOM manipilation JS andar html pages ko render kartethey
-react fragmentation:- adding extra div in App.js 
-<></>
+index.js-->main root file
+import ReactDOM from 'react-dom/client' --> DOM manipilation JS and html pages ko render kartethey
+main code logic App.js meyhi likhtey index.js meytho sirf imports and App.js ko call kartey
+<></> isko react fragmentation kehtey:- adding extra div in App.js and best instead <div></div>tags
 
 Class-2:-------------------------------------
+props important in React interview
+exports and import
+
+module.js module2.js 2 files create outside of src folder
+// default(you can mentiona any name here) and nameing  imports(only exported names you can call)
+
+DataParsing
 Class-3:-------------------------------------
 const[text,setText]=useState("this is correct setYext formmate");
 camel case in react:--to change a value we use-----onChange={} Handler
