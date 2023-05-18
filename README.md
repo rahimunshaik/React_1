@@ -26,9 +26,37 @@ module.js module2.js 2 files create outside of src folder
 // default(you can mentiona any name here) and nameing  imports(only exported names you can call)
 
 DataParsing
+In this lecture we are learning about 
+default export import and export
+naming export and import
+props
+
+// default(you can mentiona any name here) and nameing  imports(only exported names you can call)
+data parsing:-
+props :property types ko set kar rahey ho aur data ko parse karteyho
+App.js-->add logo property in Navbar 
+In components>Navbar.js-->keeps props in the Navbar()function and change the header as {props.logo} and see the change in output npm start
+they are many prop cycle,prop drilling--just data passing for now
+validation ko add karna props mey--less developers use kartey
+import propTypes from 
+get errors in inspect so developer should take care about inspect also
+you can write string as  logo="Al-Quran"  or logo={"Al-Quran" }
+integer logo=234
+default props
+rfc is the short cut to get boiler plate for react code
+use 
+className instead class in Footer.js
+htmlfor instead for in footer.js
+we use less props
+disadvantages:
+prop drilling
+if u r not using redendent prop then you will call props from parent if u have many compppnents it makes site very slow
 Class-3:-------------------------------------
+calculator>> textutils https://www.text-utils.com/text-tools/ 
+learning Hooks in React
 const[text,setText]=useState("this is correct setYext formmate");
 camel case in react:--to change a value we use-----onChange={} Handler
+
 
 create-react-app=======================================
 Installation:
