@@ -181,3 +181,88 @@ map will iterate over each element of the list to display
 Send Feedback
 What is the correct method to write an inline style specifying the background color: yellow and color:green; in JSX.
 ans: style = {{backgroundColor: 'yellow', color:'green'}}
+   
+Lecture:-5------------------Mini Project: Managing State------------------------
+   1. What happens when you call setState() inside render() method ?
+ans: Stack Overflow Error.
+Call to setState() invokes render(). Calling it inside render is suicidal. It gets into an infinite loop.
+
+2. Predict the output of following code when the initial value of number is 1 in state, and user tries to invoke the following function on click of a button
+
+
+handleClick = () => {
+    this.setState({ number: 2 }, () => console.log(this.state.number));
+    this.setState({ number: 3 }, () => console.log(this.state.number));
+}
+ans: 3 3
+Solution Description
+When setState is called multiple times it is batched together and re render happens only once.
+The callbacks for both setStates will be fired after re render.
+
+3. Predict the value of this.state.number after the click listener is invoked once and the initial value of number is 1 in state
+
+
+    handleClick = () => {
+        this.setState(
+            prevState => {
+                return {
+                number: prevState.number + 2
+                };
+            }
+        );
+        this.setState(
+            prevState => {
+                return {
+                number: prevState.number + 3
+                };
+            }
+        );
+    };
+ans: 6
+explanation: here we are using prevState, which remembers the last updated value, so here there will be no batching.
+
+5. Predict the value of this.state.number after the click listener is invoked once and the initial value of number is 1 in state
+Predict the output of the following code when the initial value of number is 1 in state
+   handleClick = () => {
+      this.setState(
+          prevState => {
+              return {
+                  number: prevState.number + 2
+              };
+          },
+          () => {
+              console.log(this.state.number);
+          }
+      );
+
+      this.setState(
+          prevState => {
+              return {
+                  number: prevState.number + 3
+              };
+          },
+          () => {
+              console.log(this.state.number);
+          }
+      );
+  };
+
+
+ans: 6 6 
+the callbacks console.log are called on updated values.
+   6. setState calls
+Send Feedback
+The state in react can be updated by call to setState method. These calls are
+ans: Asynchronous in nature. 
+Solution Description
+Call to setState in react is asynchronous in nature and multiple calls can be batched for better performance.
+
+7. Updating state
+Send Feedback
+Why we should not update the state directly and use setState?
+ans: It wont re-render the component
+
+8. What is the purpose of using callbacks in setState?
+ans: 
+Solution Description
+The callback function is invoked when setState is finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.
