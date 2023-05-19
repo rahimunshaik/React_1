@@ -357,3 +357,64 @@ This is a Demo class component!
    
 14.How can we pass the information from a component to another component which is not a direct parent, child or sibling?
    ans:   Local Storage, Redux
+15.React props:-   React - Mini project: Finishing Up - React Props
+   List.js:
+   import React from "react";
+import ListItem from "./ListItem";
+
+class List extends React.Component {
+  render() {
+    const data = [
+      {
+        id: 1,
+        name: "LinkedIn",
+        link: "http://linkedin.com",
+        icon: "https://image.flaticon.com/icons/png/128/1409/1409945.png",
+        bgColor: "#ff9580"
+      },
+      {
+        id: 2,
+        name: "GitHub",
+        link: "https://github.com",
+        icon: "https://image.flaticon.com/icons/png/128/919/919847.png",
+        bgColor: "#f2faa6"
+      },
+      {
+        id: 3,
+        name: "Twitter",
+        link: "https://twitter.com/",
+        icon: "https://image.flaticon.com/icons/png/128/1409/1409937.png",
+        bgColor: "#b8b3e8"
+      }
+    ];
+
+    const listItems = data.map((item) => (
+      <ListItem key={item.id} data={item} />
+    ));
+
+    return <div className="List">{listItems}</div>;
+  }
+}
+
+export default List;
+ListItem.js:
+   import React from "react";
+
+class ListItem extends React.Component {
+  render() {
+    const { data } = this.props;
+
+    const listItemStyle = {
+      backgroundColor: data.bgColor
+    };
+
+    return (
+      <div className="listItem" style={listItemStyle}>
+        <img src={data.icon} alt={data.name} />
+        <a href={data.link}>{data.name}</a>
+      </div>
+    );
+  }
+}
+
+export default ListItem;
