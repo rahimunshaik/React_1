@@ -725,3 +725,15 @@ ans: 0 1 -> 2 -> 3 -> 4 -> 5 ->
 Solution Description
 componentDidUpdate() is called after every re-render of the component
 first render is called and then componentDidUpdate is called. 
+          
+          
+ Lecture:-8------------------Firebase:-MiniProject_Extended_two------------------------
+         Which of the following is valid in firebase?This problem has only one correct answer
+1.citiesRef.where("state", "==", "CA").where("population", ">", 1000000);
+2.citiesRef.where("state", ">=", "CA").where("population", ">", 100000);
+3.studentsRef.where("age", "!=", "30")
+          
+ans:The valid statement in Firebase is:
+citiesRef.where("state", "==", "CA").where("population", ">", 1000000);
+          
+      
