@@ -735,5 +735,30 @@ first render is called and then componentDidUpdate is called.
           
 ans:The valid statement in Firebase is:
 citiesRef.where("state", "==", "CA").where("population", ">", 1000000);
-          
+       2.How to get all the documents in a collection?This problem has only one correct answer choose from options:---
+firebase.firestore().get()
+firebase.collection().get()
+firebase.firestore().collection().get()
+firebase.firestore().collection(‘all’).get()
+          ans:a
+          3.Sort Query
+Send Feedback
+How to sort the query by a specific property?
+This problem has only one correct answer
+firebase.firestore().orderBy(‘name’).collection(‘countries’)
+firebase.firestore().where(‘order’,’==’,’name’).get(‘countries’)
+firebase.firestore().collection(‘countries’).where(‘order’,’==’,’name’)
+firebase.firestore().collection(‘countries’).orderBy(‘name’)
+          ans:4
+          4.Correct Query
+Send Feedback
+Which of the following queries is correct?This problem has only one correct answer
+citiesRef.where('region', 'in', [['west_coast', 'east_coast']]).where(‘country’,’in’,[[’India’,’Australia’]]);
+citiesRef.where('country', 'not-in', ['USA', 'Japan']).where(‘country’,’!=’,’India’);
+citiesRef.where('region', 'in', [['west_coast', 'east_coast']]),orderBy(‘region’);
+citiesRef.where(‘state’, ‘==’, ‘CO’).orderBy(‘region’)
+Hurray! Correct Answer:-4
+Solution Description
+- You can use at most one in, not-in, or array-contains-any clause per query. You can't combine these operators in the same query.
+- You can't combine not-in with not equals !=
       
