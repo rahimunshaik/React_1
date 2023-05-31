@@ -201,10 +201,11 @@ bcz react lies on call at the top order
 
 2. we can only use in functional compoents
 we use in our custom hooks
-Lecture:-1------------------Mini Project: Starting the Project------------------------
-Lecture:-2------------------Mini Project: Starting the Project------------------------
-Lecture:-3------------------Mini Project: Starting the Project------------------------
-Lecture:-4------------------Mini Project: Starting the Project------------------------
+Lecture:-1------------------Introduction to the course------------------------
+Lecture:-2------------------Getting Started with react------------------------
+Lecture:-3------------------Warm-Up Javascript------------------------
+Lecture:-4------------------Hello World------------------------
+Lecture:-5------------------Mini Project: Starting the Project------------------------
 1. How do you write an inline style specifying the font-size:10px and color:blue in JSX?
 ans: style={{fontSize:10, color:'blue'}};
 
@@ -279,7 +280,7 @@ Send Feedback
 What is the correct method to write an inline style specifying the background color: yellow and color:green; in JSX.
 ans: style = {{backgroundColor: 'yellow', color:'green'}}
    
-Lecture:-5------------------Mini Project: Managing State------------------------
+Lecture:-6------------------Mini Project: Managing State------------------------
    1. What happens when you call setState() inside render() method ?
 ans: Stack Overflow Error.
 Call to setState() invokes render(). Calling it inside render is suicidal. It gets into an infinite loop.
@@ -365,7 +366,7 @@ Solution Description
 The callback function is invoked when setState is finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.
 
    
-   Lecture:-6------------------Mini Project: Finishing UP------------------------
+   Lecture:-7------------------Mini Project: Finishing UP------------------------
    1. Keys are given to elements in a list in React. These keys are
 ans: unique among siblings only.
 Keys used within arrays should be unique among their siblings. However, they don’t need to be globally unique.
@@ -516,7 +517,7 @@ class ListItem extends React.Component {
 
 export default ListItem;
    
- Lecture:-7------------------MiniProject_Extended_one------------------------
+ Lecture:-8------------------MiniProject_Extended_one------------------------
    
    1. Predict the output of following code
   state={
@@ -824,7 +825,7 @@ componentDidUpdate() is called after every re-render of the component
 first render is called and then componentDidUpdate is called. 
           
           
- Lecture:-8------------------Firebase:-MiniProject_Extended_two------------------------
+ Lecture:-9------------------Firebase:-MiniProject_Extended_two------------------------
          Which of the following is valid in firebase?This problem has only one correct answer
 1.citiesRef.where("state", "==", "CA").where("population", ">", 1000000);
 2.citiesRef.where("state", ">=", "CA").where("population", ">", 100000);
@@ -858,4 +859,10 @@ Hurray! Correct Answer:-4
 Solution Description
 - You can use at most one in, not-in, or array-contains-any clause per query. You can't combine these operators in the same query.
 - You can't combine not-in with not equals !=
-      
+Lecture:-10------------------Mini Project------------------------
+	       
+Lecture:-11-----------------React Hooks------------------------
+	       
+Lecture:-12------------------Building a block with Hooks------------------------
+Lecture:-13------------------Styling in React------------------------
+Lecture:-14------------------Major Project Setup and Intro------------------------
