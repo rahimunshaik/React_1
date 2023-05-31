@@ -862,7 +862,39 @@ Solution Description
 Lecture:-10------------------Mini Project------------------------
 	       
 Lecture:-11-----------------React Hooks------------------------
+	       Create a simple counter and three buttons for increasing, decreasing and resetting the counter by using useState Hook and print the value of count on the console by using useEffect hook.
 	       
+import React, { useState, useEffect } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Counter value is:",count);
+  }, [count]);
+
+  const plus = () => {
+    setCount(count + 1);
+  };
+  const minus = () => {
+    setCount(count - 1);
+  };
+  const reset = () => {
+    setCount(0);
+  };
+
+  return (
+    <>
+      <p>Counter Value is:{count}</p>
+      <button onClick={reset}>Reset</button>
+      <button onClick={plus}>Plus (+)</button>
+      <button onClick={minus}>Minus (-)</button>
+    </>
+  );
+}
+
+export default Counter;
+ 
 Lecture:-12------------------Building a block with Hooks------------------------
 Lecture:-13------------------Styling in React------------------------
 Lecture:-14------------------Major Project Setup and Intro------------------------
