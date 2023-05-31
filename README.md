@@ -1,6 +1,6 @@
 # React
 Class_1========================================================
--Frontend library--JS library--component based language[class component based,function component based]
+React is a-Frontend library--JS library--component based language[class component based,function component based]
 before react we used running node >> npm init >> 
 npm create-react-app name of you application --automatically node installed
 1GB=1024MB npm node package manager---npx-node package execution saves storage just execute the project
@@ -58,7 +58,7 @@ const[text,setText]=useState("this is correct setYext formmate");
 camel case in react:--to change a value we use-----onChange={} Handler
 
 
-create-react-app=======================================
+Course---->create-react-app=======================================
 Installation:
 open terminal redirect to you directory:-
 # sudo npm install create-react-app or remove sudo
@@ -104,6 +104,103 @@ export default log;
 in 1.js export log in this js file
 import log from './2.js';
 log();
+
+React Hooks:=========
+why hook?
+1.to use State we definetly have to create class--using class is confusing
+2. Higher order component--to share data in between compennets we want wrapper component this high wrapper component also one of the prblm.
+3. organizing the components based on life cycles
+
+why? what actually Hooks?
+Hook in react are functions which allow us to use state and otr react features with out writing class 
+provide a simpler and more concise way to use state and manage side effects from functional components.
+Hook used in lecture:-
+useState
+useEffect:-
+
+import React, {useState, useEffect} from 'react';
+
+function App(props){
+const [userId, setUserId]= useState('1');
+const [data,setData]=useState([]);
+
+useEffect( () => {
+	const url = `https://jsonplaceholder.typicode.com/posts?userId=${userId}`;
+
+fetch(url)
+ .then ( (response) => response.json() )
+ .then((data) => {
+    console.log('DATA', data);
+    setData( data);
+ });
+}, [userId]);  //3 ways empty, [] ,[userId]
+
+useEffect ( () => {
+	document.addEventListener('mousemove', onMouseMove);
+
+return () => {
+	document.removeEventListener('mousemove',onMouseMove);
+ };
+});
+
+function onMouseMove(event)
+{
+	console.log(event.clientX);
+}
+
+return (
+	<div className ="App" style={{paddingLeft: 20}}>
+<h1>App</h1>
+<button onClick= {() => setUserId('2')}> Change user id to 2 </button>
+{data.map( (user) => (
+     <div>
+	<p>{user.title}</p>
+    </div>
+))}
+</div>
+)
+}
+
+
+customHook:--
+import React, {useState} from 'react';
+
+function useFormInputs (initialValue)
+{
+	const [value, setValue] = useState(initialValue);
+
+function handleChange(e){
+	setValue(e.target.value);
+}
+return {
+value,
+onChange : handleChange,
+};
+}
+
+function loginForm() {
+	const email= useFormInputs('');
+	const password=useFormInputs('');
+
+	return(
+	<form>
+	<div>Email</div>
+	<div><input type="text" {...email}/></div>
+	<br />
+	<div>Password</div>
+	<div><input type="password" {...password} /></div>
+	<p><strong></strong></p>
+	</form>
+	)
+}
+Hook Rules:----
+Hooks r just js functions
+1.rules to follow call at the top most level
+not call a hook inside  if/for/nested/function
+bcz react lies on call at the top order
+
+2. we can only use in functional compoents
+we use in our custom hooks
 Lecture:-1------------------Mini Project: Starting the Project------------------------
 Lecture:-2------------------Mini Project: Starting the Project------------------------
 Lecture:-3------------------Mini Project: Starting the Project------------------------
