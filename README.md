@@ -861,7 +861,7 @@ Solution Description
 - You can't combine not-in with not equals !=
 Lecture:-10------------------Mini Project------------------------
 	       
-Lecture:-11-----------------React Hooks------------------------
+Lecture:-11-----------------React Hooks-----------------------
 	       Create a simple counter and three buttons for increasing, decreasing and resetting the counter by using useState Hook and print the value of count on the console by using useEffect hook.
 	       
 import React, { useState, useEffect } from "react";
@@ -896,5 +896,84 @@ function Counter() {
 export default Counter;
  
 Lecture:-12------------------Building a block with Hooks------------------------
+Building  a Blog with Hooks :--
+	       ##react>>create-react-app react-hooks-app
+	       ##firebase creation>>open console.firebase.google.com create new project >>react-hooks-app>>disabale analytics>>create proj
+	       >continue>>app name --blog register app>>continue to console>>left bar go to cloud firestore>>create DB>>start in text mode>>advance button>>asia -south then activate
+	       ##react>>open in vs code>>remove unnecesasry files from src App.css >>run cmd in terminal [rm src/App.test.js src/logo.svg src/reportWebVitals.js src/setupTests.js]
+	       >>create components folder in src>>move App.js in components>>change path in index.js at line 4 import App from './components/App';>>remove unnecessary code after line 13 and line 5>>remove line 7 -20 in App.js write Starting React BLog>>remove line 1and 2>>in terminal npm start
+	       ##firebase>>settings >>copy CDN and paste in firebase.js in vs code in index.js path>>remove script tags >>chage var to const>>create new file in index.js path[.prettierrc]>>{"singleQuote":"true"} in that file>>install dependencies>>npm i react-router-dom firebase>>import firebase from 'firebase/app' in firebase.js >>import 'firebase/firestore';  and at end [export const firestore=firebase.firestore();]>>run npm start
+Setting Up Routes:----
+	       ##code>>index.js line 5 browser router import>>line 5,7 wrap <Router> >>components>App.js>>line 1 and change data>>index.js ,Navbar.js,CreatePost.js,PostDetail.js, Home.js in components folders
+		  Project---------------------------
+		  import React from "react";
+import styled from "styled-components";
+
+const ContainerRow = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const ContainerColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Box1 = styled.div`
+  width: 100px;
+  height: 50px;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 1px solid red;
+  border-left: 3px solid red;
+`;
+
+const Box2 = styled.div`
+  width: 100px;
+  height: 50px;
+  border-right: 3px solid black;
+  border-top: 3px solid red;
+  border-bottom: 1px solid red;
+  border-left: 3px solid red;
+`;
+const Box3 = styled.div`
+  width: 100px;
+  height: 50px;
+  border-right: 3px solid black;
+  border-top: 3px solid red;
+  border-bottom: 3px solid black;
+  border-left: 3px solid red;
+`;
+
+export default function App() {
+  return (
+    <div className="App">
+      <ContainerRow>
+        <ContainerColumn>
+          <Box1 />
+          <Box2 />
+          <Box3 />
+        </ContainerColumn>
+        <ContainerColumn>
+          <Box1 />
+          <Box2 />
+          <Box3 />
+        </ContainerColumn>
+        <ContainerColumn>
+          <Box1 />
+          <Box2 />
+          <Box3 />
+        </ContainerColumn>
+        <ContainerColumn>
+          <Box1 />
+          <Box2 />
+          <Box3 />
+        </ContainerColumn>
+      </ContainerRow>
+    </div>
+  );
+}
+
+	       
 Lecture:-13------------------Styling in React------------------------
 Lecture:-14------------------Major Project Setup and Intro------------------------
