@@ -905,7 +905,7 @@ Building  a Blog with Hooks :--
 	       ##firebase>>settings >>copy CDN and paste in firebase.js in vs code in index.js path>>remove script tags >>chage var to const>>create new file in index.js path[.prettierrc]>>{"singleQuote":"true"} in that file>>install dependencies>>npm i react-router-dom firebase>>import firebase from 'firebase/app' in firebase.js >>import 'firebase/firestore';  and at end [export const firestore=firebase.firestore();]>>run npm start
 Setting Up Routes:----
 	       ##code>>index.js line 5 browser router import>>line 5,7 wrap <Router> >>components>App.js>>line 1 and change data>>index.js ,Navbar.js,CreatePost.js,PostDetail.js, Home.js in components folders
-		  Project---------------------------
+https://codesandbox.io/s/styling-in-react-starter-code-forked-fcyytt?file=/src/App.js:0-1360		  Project---------------------------
 		  import React from "react";
 import styled from "styled-components";
 
